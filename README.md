@@ -2,5 +2,5 @@
 Quick Python program to help you solve your wordles!
 
 
-#Instructions
+# Instructions
 Download .zip and unzip. Run .exe file.
