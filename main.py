@@ -1,9 +1,21 @@
 import PySimpleGUI as sg
+import os
+import sys
 
 words = []
 
 
-with open("words.txt") as txt:
+fileName = "words.txt"
+
+# determine if application is a script file or frozen exe
+if getattr(sys, 'frozen', False):
+    application_path = os.path.dirname(sys.executable)
+elif __file__:
+    application_path = os.path.dirname(__file__)
+
+filePath = os.path.join(application_path, fileName)
+
+with open(filePath) as txt:
     for line in txt:
         words.append(line.strip())
 
@@ -51,7 +63,10 @@ window = sg.Window("Wordle Tool", layout)
 while True:
     possibleWords = []
     event, values = window.read()
-    notInWord = values[10]
+    if(values[10] == None):
+        notInWord = ""
+    else:
+        notInWord = values[10]
     for word in words:
         possible = True
         for i in range(5):
