@@ -57,7 +57,6 @@ while True:
         for i in range(5):
             if values[i] == "":
                 continue
-            #print(values[i+5])
             if values[i+5]:
                 if values[i] != word[i]:
                     possible = False
@@ -70,7 +69,6 @@ while True:
             if c in word:
                 possible = False
         if(possible):
-            #print(word)
             possibleWords.append(word)
     window["-OUTPUT-"].update(possibleWords)
 
@@ -79,55 +77,3 @@ while True:
 
 
 window.close()
-
-#userIn = "-0"
-#
-# while(userIn != "-q"):
-#     print("\n\n\n\n")
-#     print("-q to quit")
-#     userIn = input(">> ")
-#     if userIn == "-q":
-#         break
-#     if(userIn[1] == ","):
-#         unknownLetters = userIn[0:userIn.index(" ")]
-#         secondBit = userIn[userIn.index(" ")+1:]
-#         try:
-#             word = secondBit[0:secondBit.index(" ")]
-#             notInLetters = secondBit[secondBit.index(" ") + 1:]
-#         except:
-#             word = secondBit
-#     else:
-#         word = userIn
-#     chars = []
-#     unknownChars = []
-#     notInChars = []
-#     for c in word:
-#         chars.append(c)
-#     for c in unknownLetters:
-#         if(c == ','):
-#             continue
-#         unknownChars.append(c)
-#     for c in notInLetters:
-#         if(c == ','):
-#             continue
-#         notInChars.append(c)
-#
-#     for word in words:
-#         wordChars = []
-#         for char in word:
-#             wordChars.append(char)
-#         possible = True
-#         for c in unknownChars:
-#             if c not in word:
-#                 possible = False
-#         for i in range(5):
-#             if chars[i] == "-":
-#                 continue
-#             if(word[i] != chars[i]):
-#                 possible = False
-#                 break
-#         for c in notInChars:
-#             if(c in wordChars):
-#                 possible = False
-#         if(possible):
-#             print(word)
