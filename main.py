@@ -43,7 +43,7 @@ input_column = [
     [letterNotInBox],
 ]
 
-possibleWords = []
+possibleWords = words
 
 outputList = sg.Listbox(values=possibleWords, enable_events=True, size=(40, 20), key="-OUTPUT-")
 outputColumn = [
