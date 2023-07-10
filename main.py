@@ -4,7 +4,6 @@ import sys
 
 words = []
 
-
 fileName = "words.txt"
 
 # determine if application is a script file or frozen exe
@@ -89,6 +88,5 @@ while True:
 
     if event == "Exit" or event == sg.WIN_CLOSED:
         break
-
 
 window.close()
